@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""janitor - find what is eating your disk, and say plainly what is safe to remove.
+"""disk_cleaner - find what is eating your disk, and say plainly what is safe to remove.
 
 Read only until you ask it to clean, and even then it goes to the Recycle Bin.
 
-    python janitor.py                    # report, nothing is touched
-    python janitor.py --clean            # show the plan, ask, then recycle
-    python janitor.py --clean --yes      # no question
-    python janitor.py --roots "D:\\"     # look somewhere else
-    python janitor.py --json             # for scripting
+    python disk_cleaner.py                    # report, nothing is touched
+    python disk_cleaner.py --clean            # show the plan, ask, then recycle
+    python disk_cleaner.py --clean --yes      # no question
+    python disk_cleaner.py --roots "D:\\"     # look somewhere else
+    python disk_cleaner.py --json             # for scripting
 """
 
 import argparse

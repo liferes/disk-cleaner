@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: run the tests
-        run: python test_janitor.py
+        run: python test_disk_cleaner.py

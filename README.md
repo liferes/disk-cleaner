@@ -1,10 +1,10 @@
-# janitor
+# disk-cleaner
 
-![tests](https://github.com/liferes/disk-janitor/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/liferes/disk-cleaner/actions/workflows/tests.yml/badge.svg)
 
 Tells you what is eating your disk, in plain words, and only then offers to move the safe parts to the Recycle Bin.
 
-<img src="docs/demo.png" width="880" alt="janitor printing the folders it would recycle, then refusing to act without a yes">
+<img src="docs/demo.png" width="880" alt="disk-cleaner printing the folders it would recycle, then refusing to act without a yes">
 
 <sub>Paths and app names are replaced. The sizes are real.</sub>
 
@@ -18,7 +18,7 @@ Three verdicts, and nothing else:
 
 ## The rules are the product
 
-Anyone can sum folder sizes. The useful part is knowing that `Code Cache` is disposable and `@opencodedesktop-updater` is not, because an update is sitting in it waiting to install. `RULES` in `janitor.py` is an ordered list of those decisions, each with the reason printed next to it:
+Anyone can sum folder sizes. The useful part is knowing that `Code Cache` is disposable and `@opencodedesktop-updater` is not, because an update is sitting in it waiting to install. `RULES` in `disk_cleaner.py` is an ordered list of those decisions, each with the reason printed next to it:
 
 ```python
 # (kind, value, verdict, why)
@@ -44,13 +44,13 @@ Locked files are skipped and reported, so a running browser does not stop the re
 ## Usage
 
 ```bash
-python janitor.py                  # report only, touches nothing
-python janitor.py --clean          # show the plan, ask, then recycle
-python janitor.py --clean --yes    # no question
-python janitor.py --top 40         # longer list
-python janitor.py --min 500MB      # ignore small stuff
-python janitor.py --roots "D:\\"   # look somewhere else
-python janitor.py --json           # for scripting
+python disk_cleaner.py                  # report only, touches nothing
+python disk_cleaner.py --clean          # show the plan, ask, then recycle
+python disk_cleaner.py --clean --yes    # no question
+python disk_cleaner.py --top 40         # longer list
+python disk_cleaner.py --min 500MB      # ignore small stuff
+python disk_cleaner.py --roots "D:\\"   # look somewhere else
+python disk_cleaner.py --json           # for scripting
 ```
 
 Python 3.9 or newer. No dependencies, no install.
@@ -58,7 +58,7 @@ Python 3.9 or newer. No dependencies, no install.
 ## Tests
 
 ```bash
-python test_janitor.py
+python test_disk_cleaner.py
 ```
 
 They build a fake disk in a temp folder and check that real data and protected folders survive a clean, and that the updater folders are never classified as safe. Nothing real is touched.
