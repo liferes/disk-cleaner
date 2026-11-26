@@ -6,7 +6,7 @@ Tells you what is eating your disk, in plain words, and only then offers to move
 
 <img src="docs/demo.png" width="880" alt="janitor printing the folders it would recycle, then refusing to act without a yes">
 
-<sub>Folder names are shown as `C:\Users\you`. The sizes are real.</sub>
+<sub>Paths and app names are replaced. The sizes are real.</sub>
 
 Three verdicts, and nothing else:
 
