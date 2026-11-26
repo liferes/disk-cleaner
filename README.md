@@ -4,18 +4,7 @@
 
 Tells you what is eating your disk, in plain words, and only then offers to move the safe parts to the Recycle Bin.
 
-```text
-Scanned 24 folders in 4.8s.  19.5 GB total, 2.6 GB of it cache.
-
-SIZE      FOLDER                                          VERDICT
---------------------------------------------------------------------------
-6.2 GB    ...\AppData\Local\Programs                  ?    ASK
-                                                           installed apps live here
-2.8 GB    ...\AppData\Local\BraveSoftware             ?    ASK
-                                                           of which 904.9 MB is cache
-307.4 MB  ...\AppData\Local\Temp                      -    SAFE
-                                                           temporary files, rebuilt on demand
-```
+<img src="docs/demo.png" width="880" alt="janitor printing the folders it would recycle, then refusing to act without a yes">
 
 Three verdicts, and nothing else:
 
